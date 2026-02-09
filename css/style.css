@@ -266,7 +266,19 @@ h2::after {
 }
 
 .carousel-item {
-  min-height: 500px;
+  min-height: 500px; 
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    min-height: 400px; 
+  }
+}
+
+@media (max-width: 468px) {
+  .carousel-item {
+    min-height: 350px; 
+  }
 }
 
 .carousel-description {
@@ -384,4 +396,5 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 }
+
 
