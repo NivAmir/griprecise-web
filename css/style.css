@@ -218,7 +218,6 @@ h2::after {
 
 .footer-icon {
   background: #fff;
-  margin-left: -50px;
   padding: 5px;
   border-radius: 50%;
   object-fit: contain;
@@ -396,5 +395,6 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 }
+
 
 
