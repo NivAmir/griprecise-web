@@ -1,0 +1,385 @@
+/* ==============================================
+   COLORS & FONT (Global)
+   ============================================== */
+:root {
+  --black: #000000;
+  --grey: #bfbfbf;
+  --light: #ffffff;
+  --red: #d32f2f;
+  --font-stack: "Noto Serif", "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ==============================================
+   GLOBAL STYLES
+   ============================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-stack);
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-image: url('../img/bg_repetitive_img_new.png'); 
+  backdrop-filter: brightness(1.2) blur(0.8px);
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url('../img/bg_repetitive_img_new_dark.png'); 
+    backdrop-filter: brightness(0.8) blur(0.8px); 
+  }
+}
+
+body.login-page {
+  backdrop-filter: brightness(0.8) blur(1px);
+}
+
+/* HEADINGS */
+h2 {
+  animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--red);
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* ==============================================
+   NAVBAR
+   ============================================== */
+.site-navbar {
+  background: var(--black);
+}
+
+.site-navbar .brand-text {
+  color: var(--grey);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* LOGO */
+.logo-img {
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+/* PULSE DOT */
+.pulse-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.6);
+  animation: pulse 1.6s infinite;
+  vertical-align: middle;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(1.7);
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* NAV-LINKS */
+.nav-link.active {
+  color: white !important;
+}
+
+.nav-link.text-danger {
+  color: var(--red) !important;
+  font-weight: bold;
+}
+
+.nav-link.text-danger:hover {
+  color: white !important;
+  font-weight: bold;
+}
+
+/* ==============================================
+   FORMS (Login & Signup)
+   ============================================== */
+.auth-form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.auth-section {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(240, 240, 240, 0.96);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Links inside forms */
+.auth-section a {
+  color: var(--red);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.auth-section a:hover {
+  color: var(--grey);
+}
+
+/* Checkboxes */
+.checkbox-group {
+  margin-bottom: 1rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--red);
+  border-color: var(--black);
+}
+
+/* ==============================================
+   LAYOUT & CONTENT WRAPPERS
+   ============================================== */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.bg-content {
+  width: 100%;
+  background-color: rgba(240, 240, 240, 0.96);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+.footer-bottom {
+  background-color: var(--black);
+  color: var(--grey);
+  font-size: 0.9rem;
+  border-top: 3px solid var(--red);
+}
+
+.footer-bottom .contact-link {
+  color: var(--red);
+  font-weight: 500;
+}
+
+.footer-bottom .contact-link:hover {
+  color: var(--light);
+  text-decoration: underline;
+}
+
+.footer-icon {
+  background: #fff;
+  margin-left: -50px;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+/* ==============================================
+   CAROUSEL & GALLERY
+   ============================================== */
+.carousel-img {
+  height: 400px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 250px;
+  }
+}
+
+
+@media (max-width: 468px) {
+  .carousel-img {
+    height: 200px;
+  }
+}
+
+.custom-carousel-btn {
+  background: var(--grey);
+  border: 1px solid var(--black);
+  color: black;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+}
+
+.custom-carousel-btn:hover {
+  background: linear-gradient(90deg, var(--red), #ff5252);
+}
+
+.carousel-item {
+  min-height: 500px;
+}
+
+.carousel-description {
+  max-width: 700px;
+  margin: 10px auto;
+  background-color: #f8f9fa;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.carousel-description:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 468px) {
+  .carousel-description {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+.gallery-img {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.gallery-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================================
+   CARDS & BUTTONS
+   ============================================== */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background: linear-gradient(90deg, var(--red), #ff5252);
+  border: 1px solid var(--black);
+  color: white;
+}
+
+/* Gripper buttons */
+.btn-outline-green {
+  background-color: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.btn-outline-green:hover {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  border: 1px solid var(--black);
+  color: white;
+}
+
+.feature-gif {
+  display: block;
+  width: 100px;
+  margin: 10px auto 0;
+  border-radius: 8px;
+}
+
+/* ==============================================
+   RANGE SLIDER
+   ============================================== */
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--red);
+  border: 1px solid var(--black);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ==============================================
+   BACKGROUNDS
+   ============================================== */
+.bg_repetitive_img {
+  min-height: 40vh;
+  background-image: url('../img/bg_repetitive_img.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bg_repetitive_img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25));
+}
+
+.bg_repetitive_img .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+@media (max-width: 576px) {
+  .bg_repetitive_img .display-4 {
+    font-size: 1.6rem;
+  }
+}
