@@ -268,15 +268,10 @@ h2::after {
   min-height: 500px; 
 }
 
-@media (max-width: 768px) {
-  .carousel-item {
-    min-height: 400px; 
-  }
-}
 
 @media (max-width: 468px) {
   .carousel-item {
-    min-height: 350px; 
+    min-height: 420px; 
   }
 }
 
@@ -395,6 +390,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 }
+
 
 
 
