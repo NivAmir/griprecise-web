@@ -271,7 +271,7 @@ h2::after {
 
 @media (max-width: 468px) {
   .carousel-item {
-    min-height: 420px; 
+    min-height: 450px; 
   }
 }
 
@@ -390,6 +390,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 }
+
 
 
 
