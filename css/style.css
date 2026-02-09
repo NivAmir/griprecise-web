@@ -98,7 +98,7 @@ h2::after {
   width: 10px;
   height: 10px;
   background: var(--red);
-  border-radius: 50%;
+  border-radius: 150px;
   box-shadow: 0 0 8px rgba(211, 47, 47, 0.6);
   animation: pulse 1.6s infinite;
   vertical-align: middle;
@@ -382,4 +382,5 @@ input[type="range"]::-webkit-slider-thumb {
   .bg_repetitive_img .display-4 {
     font-size: 1.6rem;
   }
+
 }
