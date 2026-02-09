@@ -36,6 +36,7 @@ The platform provides a comprehensive interface for operating a robotic gripper,
 
 ## 👥 Authors
 * **Niv Amir** - [GitHub Profile](https://github.com/NivAmir)
+* **Omri Biadgilin** - [GitHub Profile](https://github.com/OmriBiadgilin)
 
 ---
 
