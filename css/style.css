@@ -255,7 +255,7 @@ h2::after {
   background: var(--grey);
   border: 1px solid var(--black);
   color: black;
-  top: 50%;
+  top: 150px;
   width: 50px;
   height: 50px;
   border-radius: 10%;
@@ -384,3 +384,4 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 }
+
