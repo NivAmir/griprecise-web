@@ -166,7 +166,7 @@ function updateRoleBadge(experience, accountType) {
 /** * Initializes the ESP32-CAM stream, loads the AI model, and handles identification logic.
  */
 async function initCameraAI() {
-    const modelURL = "https://teachablemachine.withgoogle.com/models/jNFI5YE_J/";
+    const modelURL = "https://teachablemachine.withgoogle.com/models/3GNtLCLw7/";
     const privacyIcon = "https://img.icons8.com/ios-filled/100/000000/no-video.png";
 
     const cameraFrame = document.getElementById('cameraFrame');
@@ -863,4 +863,5 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "login.html";
         }
     });
+
 });
