@@ -35,7 +35,7 @@ let aiModel;
 let pressureChart;
 
 /** Local IP for ESP32-CAM stream. */
-window.CAMERA_IP = "10.122.154.110";
+window.CAMERA_IP = "10.175.172.110";
 
 /** * Stores the most recent material identified by the AI model.
  * Defaults to "None" until a successful classification occurs.
