@@ -794,7 +794,7 @@ function initDashboardControls() {
     onValue(ref(database, 'fromAltera/A'), (snap) => {
         const dist = snap.val();
         document.getElementById('distanceValue').textContent = dist ?? "–";
-        document.getElementById('distanceWarning')?.classList.toggle('d-none', dist <= 100);
+        document.getElementById('distanceWarning')?.classList.toggle('d-none', dist <= 20);
     });
 }
 
