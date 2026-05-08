@@ -71,7 +71,7 @@ function calculateLedValue(material, probability) {
 function updateConfidenceUI(predictions) {
     predictions.forEach(prediction => {
         const label = prediction.className.toLowerCase();
-        const percentage = (prediction.probability * 100).toFixed(1) + "%";
+        const percentage = (Math.floor(prediction.probability * 1000) / 10).toFixed(1) + "%";
 
         const confSpan = document.getElementById(`conf-${label}`);
         confSpan.innerText = percentage;
