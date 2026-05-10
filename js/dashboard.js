@@ -734,7 +734,7 @@ function initDashboardControls() {
 
         // 1. Distance Check
         const distSnap = await get(ref(database, 'fromAltera/A'));
-        if (Number(distSnap.val() ?? 0) > 200) return alert("Object out of range!");
+        //if (Number(distSnap.val() ?? 0) > 200) return alert("Object out of range!");
 
         // 2. Material & Pressure Check
         const isAuto = (document.getElementById('materialSelect').value === "auto");
